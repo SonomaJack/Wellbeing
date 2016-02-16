@@ -206,7 +206,7 @@ function makeSubscription($subscriptionName, $subscriptionNotes,$FullName,$Start
    
     $zSubscription->InitialTerm = $InitialTerm;
     $zSubscription->RenewalTerm = 0;//$InitialTerm;
-    $zSubscription->ServiceActivationDate = $date;
+    $zSubscription->ServiceActivationDate = $formattedDate;
     $zSubscription->quantity = 1;
     
    
