@@ -203,12 +203,12 @@ function makeSubscription($subscriptionName, $subscriptionNotes,$FullName,$Start
     $zSubscription->ContractEffectiveDate = $date;
    
     $zSubscription->InitialTerm = $InitialTerm;
-    $zSubscription->RenewalTerm = $InitialTerm;
+    $zSubscription->RenewalTerm = 0;//$InitialTerm;
     $zSubscription->ServiceActivationDate = $date;
     $zSubscription->quantity = 1;
     
    
-    $zSubscription->TermStartDate=$date;
+    $zSubscription->TermStartDate=$StartDate;
 		$zSubscription->Status = 'Active';
 		$zSubscription->Currency = 'USD';
 		$zSubscription->AutoRenew = 0;
@@ -313,7 +313,7 @@ function createAndApplyPayment($instance,$accountId,&$CreateStatus){
  $payment = new Zuora_Payment();
  $payment->AccountId = $accountId;
  $payment->Amount = $amount;
- $payment->EffectiveDate = date('Y-m-d\TH:i:s');
+ $payment->EffectiveDate = StartDate;//date('Y-m-d\TH:i:s');
  $payment->PaymentMethodId = $paymentMethodId;
  $payment->Type = 'Electronic';
  $payment->Status = 'Draft';
