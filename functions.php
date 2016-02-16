@@ -208,7 +208,7 @@ function makeSubscription($subscriptionName, $subscriptionNotes,$FullName,$Start
     $zSubscription->quantity = 1;
     
    
-    $zSubscription->TermStartDate=$StartDate;
+    $zSubscription->TermStartDate=$date;
 		$zSubscription->Status = 'Active';
 		$zSubscription->Currency = 'USD';
 		$zSubscription->AutoRenew = 0;
