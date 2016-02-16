@@ -1015,11 +1015,6 @@ echo $Generalstatus;
                             <td><input name="CreditCardExpirationMonth" type="text"
                                 id="CreditCardExpirationMonth" maxlength="2" size="2"
                                 value="<?php if (isset($gCreditCardExpirationMonth)) {echo $gCreditCardExpirationMonth;}?>" />
-
-                                <input name="CreditCardExpirationYear" type="text"
-                                id="CreditCardExpirationYear" maxlength="4" size="4"
-                                value="<?php if (isset($gCreditCardExpirationYear)) {echo $gCreditCardExpirationYear;}?>" />
-
                             </td>
                         </tr>
 						<tr>

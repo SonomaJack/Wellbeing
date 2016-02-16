@@ -313,7 +313,7 @@ function createAndApplyPayment($instance,$accountId,&$CreateStatus){
  $payment = new Zuora_Payment();
  $payment->AccountId = $accountId;
  $payment->Amount = $amount;
- $payment->EffectiveDate = StartDate.format('Y-m-d\TH:i:s');//date('Y-m-d\TH:i:s');
+ $payment->EffectiveDate = $StartDate.format('Y-m-d\TH:i:s');//date('Y-m-d\TH:i:s');
  $payment->PaymentMethodId = $paymentMethodId;
  $payment->Type = 'Electronic';
  $payment->Status = 'Draft';
