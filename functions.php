@@ -194,7 +194,7 @@ function makePaymentMethod($creditCardHolderName,  $creditCardType, $creditCardN
 function makeSubscription($subscriptionName, $subscriptionNotes,$FullName,$StartDate__c,$Physician__c,$Location__c, $SalesRep, $StartDate, $InitialTerm){
 	  $date = date('Y-m-d\TH:i:s',time());
       $lStartDate = new DateTime($StartDate);
-      $formattedDate = $lStartDate->format('Y-m-d\TH:i:s')
+      $formattedDate = format($lStartDate,'Y-m-d\TH:i:s');
 	  
 	  $zSubscription = new Zuora_Subscription();
 
