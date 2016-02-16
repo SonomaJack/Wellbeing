@@ -201,7 +201,7 @@ function makeSubscription($subscriptionName, $subscriptionNotes,$FullName,$Start
     $zSubscription->Name = $subscriptionName;
 		$zSubscription->Notes = $subscriptionNotes;
 		
-    $zSubscription->ContractAcceptanceDate = $date;
+    $zSubscription->ContractAcceptanceDate = $formattedDate;
     $zSubscription->ContractEffectiveDate = $formattedDate;
    
     $zSubscription->InitialTerm = $InitialTerm;
