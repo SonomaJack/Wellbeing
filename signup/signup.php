@@ -242,7 +242,8 @@ if ($instance->login($username, $password)) {
         case 'Sandy Springs':
             $Docs = array(
                 1 => 'Beaty',
-                'Lemene'
+                'Lemene',
+                'Lassiter'
             );
             break;
         case 'Owings Mill':
@@ -309,7 +310,7 @@ if ($instance->login($username, $password)) {
         // }
         
         if (isset($rateplanId) && strlen($rateplanId) == 32) {
-            $rateplancharges = queryAll($instance, "select Id, Name, AccountingCode, DefaultQuantity, Type, Model, ProductRatePlanId from ProductRatePlanCharge where ProductRatePlanId ='" . $rateplanId . "'");
+            $rateplancharges = queryAll($instance, "select Id, Name, AccountingCode, DefaultQuantity, Type, Model, ProductRatePlanId from ProductRatePlanCharge where ProductRatePlanId ='" . $rateplanId . "' and Name like 'Wellbeing%'" );
             
             if ($chargeIds == null) {
                 $chargeIds = array();
@@ -998,17 +999,12 @@ echo $Generalstatus;
                             </td>
                             <td><input name="CreditCardExpirationMonth" type="text"
                                 id="CreditCardExpirationMonth" maxlength="2" size="2"
-                                value="<?php if (isset($gCreditCardExpirationMonth)) {echo $gCreditCardExpirationMonth;}?>" />
-
-                                <input name="CreditCardExpirationYear" type="text"
-                                id="CreditCardExpirationYear" maxlength="4" size="4"
-                                value="<?php if (isset($gCreditCardExpirationYear)) {echo $gCreditCardExpirationYear;}?>" />
-
+                                value="<?php if (isset($gCreditCardExpirationMonth)) {echo $gCreditCardExpirationMonth;}?>" />                              
                             </td>
 						</tr>
 						
                         <tr>
-                            <td><label for="WorkEmail"> Email </label></td>
+                            <td><label for="WorkEmail"> *Email </label></td>
                             <td><input name="WorkEmail" type="text" id="WorkEmail"
                                 maxlength="80" size="20"
                                 value="<?php echo htmlentities($fieldsValue[$WorkEmail]);?>" />

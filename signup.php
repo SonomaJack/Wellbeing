@@ -206,7 +206,7 @@ if($instance->login($username, $password)){
 			$Docs = array(1 => 'Ditaranto');
 			break;									
 		case 'Sandy Springs':
-			$Docs = array(1 => 'Beaty', 'Lemene');
+			$Docs = array(1 => 'Beaty', 'Lemene', 'Lsassiter');
 			break;									
 		case 'Owings Mill':
 			$Docs = array(1 => 'Sobel', 'Goldbloom');
