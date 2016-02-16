@@ -193,6 +193,8 @@ function makePaymentMethod($creditCardHolderName,  $creditCardType, $creditCardN
 }
 function makeSubscription($subscriptionName, $subscriptionNotes,$FullName,$StartDate__c,$Physician__c,$Location__c, $SalesRep, $StartDate, $InitialTerm){
 	  $date = date('Y-m-d\TH:i:s',time());
+      $lStartDate = new DateTime($StartDate);
+      $formattedDate = $lStartDate_>format('Y-m-d\TH:i:s')
 	  
 	  $zSubscription = new Zuora_Subscription();
 
@@ -208,7 +210,7 @@ function makeSubscription($subscriptionName, $subscriptionNotes,$FullName,$Start
     $zSubscription->quantity = 1;
     
    
-    $zSubscription->TermStartDate=$StartDate__c.date_format('Y-m-d\TH:i:s');
+    $zSubscription->TermStartDate=$formattedDate;
 		$zSubscription->Status = 'Active';
 		$zSubscription->Currency = 'USD';
 		$zSubscription->AutoRenew = 0;
