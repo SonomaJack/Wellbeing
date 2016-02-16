@@ -994,12 +994,17 @@ echo $Generalstatus;
 
 
 							</td>
-                            <td>&nbsp;</td>
+                             <td>&nbsp;</td>
                             <td><label for="CreditCardExpirationMonth"> Expiration <snall>(mm/yyyy) </snall></label>
                             </td>
                             <td><input name="CreditCardExpirationMonth" type="text"
                                 id="CreditCardExpirationMonth" maxlength="2" size="2"
-                                value="<?php if (isset($gCreditCardExpirationMonth)) {echo $gCreditCardExpirationMonth;}?>" />                              
+                                value="<?php if (isset($gCreditCardExpirationMonth)) {echo $gCreditCardExpirationMonth;}?>" />
+
+                                <input name="CreditCardExpirationYear" type="text"
+                                id="CreditCardExpirationYear" maxlength="4" size="4"
+                                value="<?php if (isset($gCreditCardExpirationYear)) {echo $gCreditCardExpirationYear;}?>" />
+
                             </td>
 						</tr>
 						
@@ -1009,12 +1014,11 @@ echo $Generalstatus;
                                 maxlength="80" size="20"
                                 value="<?php echo htmlentities($fieldsValue[$WorkEmail]);?>" />
                             </td>
-                            <td>&nbsp;</td>
-                            <td><label for="CreditCardExpirationMonth"> Expiration <snall>(mm/yyyy) </snall></label>
-                            </td>
-                            <td><input name="CreditCardExpirationMonth" type="text"
-                                id="CreditCardExpirationMonth" maxlength="2" size="2"
-                                value="<?php if (isset($gCreditCardExpirationMonth)) {echo $gCreditCardExpirationMonth;}?>" />
+                           <td>&nbsp;</td>
+                            <td><label for="Address1">* Address </label></td>
+                            <td><input name="Address1" type="text"
+                                id="Address1" maxlength="40" size="20"
+                                value="<?php echo htmlentities($fieldsValue[$Address1]); ?>" />
                             </td>
                         </tr>
 						<tr>
@@ -1023,12 +1027,12 @@ echo $Generalstatus;
 								size="20"
 								value="<?php if (isset($gFullName)) {    echo $gFullName;}?>" />
 							</td>
-                            <td>&nbsp;</td>
-                            <td><label for="Address1">* Address </label></td>
-                            <td><input name="Address1" type="text"
-                                id="Address1" maxlength="40" size="20"
-                                value="<?php echo htmlentities($fieldsValue[$Address1]); ?>" />
-                            </td>
+                           <td>&nbsp;</td>
+                            <td><label for="City">* City </label></td>
+                            <td><input name="City" type="text"
+                                id="City" maxlength="40" size="20"
+                                value="<?php echo htmlentities($fieldsValue[$City]);?>" />
+                            </td> 
 						</tr>
 						<tr>
 							<td><label for="FirstName"> First Name </label></td>
@@ -1036,12 +1040,10 @@ echo $Generalstatus;
 								maxlength="40" size="20"
 								value="<?php if (isset($gFirstName)) {    echo $gFirstName;}?>" />
 							</td>
-                            <td>&nbsp;</td>
-                            <td><label for="City">* City </label></td>
-                            <td><input name="City" type="text"
-                                id="City" maxlength="40" size="20"
-                                value="<?php echo htmlentities($fieldsValue[$City]);?>" />
-                            </td>
+                           <td>&nbsp;</td>
+                            <td><label for="State">* State </label></td>
+                            <td> <select name="State"><?php echo StateDropdown('VA', 'mixed'); ?></select>
+                            </td> 
 						</tr>
 						<tr>
 							<td><label for="LastName"> Last Name </label></td>
@@ -1049,23 +1051,13 @@ echo $Generalstatus;
 								maxlength="80" size="20"
 								value="<?php if (isset($gLastName)) {    echo $gLastName;}?>" />
                             </td>
-                            <td>&nbsp;</td>
-                            <td><label for="State">* State </label></td>
-                            <td> <select name="State"><?php echo StateDropdown('VA', 'mixed'); ?></select>
-                            </td>
-						</tr> 
-                            <tr>
-                                <td>
-                                </td>
-                                <td>
-                                </td>
-                            <td>&nbsp;</td>
+                           <td>&nbsp;</td>
                                 <td><label for="PostalCode">* ZIP/Postal Code </label></td>
                                 <td><input name="PostalCode" type="text"
                                     id="PostalCode" maxlength="40" size="20"
                                     value="<?php echo htmlentities($fieldsValue[$PostalCode]); ?>" />
-                                </td>
-                            </tr> 
+                                </td> 
+						 
 					</table>
 				</td>
 			</tr>
