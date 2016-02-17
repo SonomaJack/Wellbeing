@@ -459,7 +459,9 @@ if ($instance->login($username, $password)) {
 	                                            }
                                                 else
                                                 {
-                                                    $Generalstatus = "Fail";
+                                                    $Generalstatus  = "Created Account and but payment not process due to future start date " . $gFullName;
+                                                    $_SESSION['MemberName'] = $Generalstatus;
+                                                    header("Location: success.php" . $URLParms); 
                                                 }
 	                                        }
                                             elseif ($accountId )
