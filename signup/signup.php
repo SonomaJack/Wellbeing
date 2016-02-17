@@ -678,7 +678,7 @@ function validate()
         $gCreditCardNumber          = substr($ParsedString[0], 2, strlen($ParsedString[0]) - 2);
         $gFirstName                 = substr($ParsedString[1], stripos($ParsedString[1], "/") + 1, 99);
         $gLastName                  = $ParsedName[0];
-        $gStartDate                 = $fieldsValue["StartDate"];
+        
         if ($gValidated != 'YES') {
         	$gFullName                  = trim($gLastName) . ", " . trim($gFirstName) . " - Wellbeing"  ;
         }
@@ -693,7 +693,13 @@ function validate()
 
     }
     // end update cc info
-     
+     if (!isEmpty($fieldsValue["StartDate"])) {
+        $gStartDate                 = $fieldsValue["StartDate"];
+     }
+     else
+     {
+      $gStartDate                 = date("m/d/Y"); 
+     }
     //Check required field
     if (!isEmpty($fieldsValue["CreditCardNumber"])) {
         $valid = true;
