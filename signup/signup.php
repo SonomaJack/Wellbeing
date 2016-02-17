@@ -75,7 +75,7 @@ $CreditCardExpirationYear  = "CreditCardExpirationYear";
 $CreditCardType            = "CreditCardType";
 $CreditCardPostalCode      = "CreditCardPostalCode";
 $validated				   = 'validated';
-$StartDate                 = date("m/d/Y"); 
+//$StartDate                 = date("m/d/Y"); 
 
 $status        = '';
 $Generalstatus = '';
