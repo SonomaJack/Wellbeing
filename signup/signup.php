@@ -611,6 +611,7 @@ function validate()
     global $requireFieldsArray;
     global $ValidationStatus;
     global $gCreditCardNumber;
+    global $gStartDate; 
     
     global $gValidated;
 
@@ -677,6 +678,7 @@ function validate()
         $gCreditCardNumber          = substr($ParsedString[0], 2, strlen($ParsedString[0]) - 2);
         $gFirstName                 = substr($ParsedString[1], stripos($ParsedString[1], "/") + 1, 99);
         $gLastName                  = $ParsedName[0];
+        $gStartDate                 = $fieldsValue["StartDate"];
         if ($gValidated != 'YES') {
         	$gFullName                  = trim($gLastName) . ", " . trim($gFirstName) . " - Wellbeing"  ;
         }
@@ -987,7 +989,7 @@ echo $Generalstatus;
 							<td><label for="StartDate"> Start Date <snall>(m/d/yyyy) </snall> </label></td>
 							<td><input name="StartDate" type="text" id="StartDate"
 								maxlength="10" size="10"
-								value="<?php if (isset($StartDate)) { echo $StartDate;}?>" />
+								value="<?php if (isset($gStartDate)) { echo $gStartDate;}?>" />
 
 
 							</td>
