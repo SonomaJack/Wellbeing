@@ -456,6 +456,10 @@ if ($instance->login($username, $password)) {
 	                                                }
 	                                            }
 	                                        }
+                                            elseif ($accountId )
+                                            {
+                                                header("Location: success.php" . $URLParms);
+                                            }
 	                                    } // check the success of subscribe
 	                                    else // check the success of subscribe
 	                                        {
