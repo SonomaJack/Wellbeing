@@ -455,6 +455,10 @@ if ($instance->login($username, $password)) {
 	                                                    }
 	                                                }
 	                                            }
+                                                else
+                                                {
+                                                    $Generalstatus = "Fail";
+                                                }
 	                                        }
                                             elseif ($accountId )
                                             {
