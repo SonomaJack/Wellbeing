@@ -997,7 +997,7 @@ echo $Generalstatus;
 							<td><label for="StartDate"> Start Date <snall>(m/d/yyyy) </snall> </label></td>
 							<td><input name="StartDate" type="text" id="StartDate"
 								maxlength="10" size="10"
-								value="<?php if (isset($StartDate)) { echo $StartDate;}?>" />
+								value="<?php  echo htmlentities($fieldsValue[$StartDate]); ?>" />
 
 
 							</td>
