@@ -696,7 +696,7 @@ function validate()
     }
     // end update cc info
      if (!isEmpty($fieldsValue["StartDate"])) {
-        $StartDate                 = $fieldsValue["StartDate"];
+        $StartDate                 = $_POST['StartDate'];
      }
      else
      {
