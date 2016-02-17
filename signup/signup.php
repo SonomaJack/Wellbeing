@@ -75,6 +75,7 @@ $CreditCardExpirationYear  = "CreditCardExpirationYear";
 $CreditCardType            = "CreditCardType";
 $CreditCardPostalCode      = "CreditCardPostalCode";
 $validated				   = 'validated';
+$StartDate                 = date("m/d/Y"); 
 
 $status        = '';
 $Generalstatus = '';
@@ -162,6 +163,7 @@ $fieldsValue[$LastName]                  = getPostValue($LastName, '');
 $fieldsValue[$WorkEmail]                 = getPostValue($WorkEmail, '');
 $fieldsValue[$StartDate]                 = getPostValue($StartDate, '');
 $fieldsValue[$validated]				 = getPostValue($validated,'NO');
+$fieldsValue[$StartDate]                 = getPostValue($StartDate,date("m/d/Y"));
 
  $fieldsValue[$WorkPhone] = getPostValue($WorkPhone,'');
  $fieldsValue[$Address1] = getPostValue($Address1,'');
@@ -995,7 +997,7 @@ echo $Generalstatus;
 							<td><label for="StartDate"> Start Date <snall>(m/d/yyyy) </snall> </label></td>
 							<td><input name="StartDate" type="text" id="StartDate"
 								maxlength="10" size="10"
-								value="<?php if (isset($gStartDate)) { echo $gStartDate;}?>" />
+								value="<?php if (isset($StartDate)) { echo $StartDate;}?>" />
 
 
 							</td>
