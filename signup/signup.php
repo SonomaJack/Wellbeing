@@ -423,7 +423,7 @@ if ($instance->login($username, $password)) {
 	                                        $accountId = $result2->result->Id;
                                             $lStartDate = new DateTime($_POST['StartDate']);
                                             $formattedDate = date_format($lStartDate ,'Y-m-d\TH:i:s');
-	                                        if ($accountId && date('Y-m-d\TH:i:s') >= $formattedDate) {
+	                                        if ($accountId){// && date('Y-m-d\TH:i:s') >= $formattedDate) {
 	                                            $invoiceDate  = date('Y-m-d\TH:i:s');
 	                                            $targetDate   = date('Y-m-d\TH:i:s');
 	                                            $result       = generateInvoice($instance, $accountId, $invoiceDate, $targetDate);
