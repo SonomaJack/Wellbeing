@@ -161,7 +161,7 @@ $fieldsValue[$Name]                      = getPostValue($Name, ' ');
 $fieldsValue[$FirstName]                 = getPostValue($FirstName, '');
 $fieldsValue[$LastName]                  = getPostValue($LastName, '');
 $fieldsValue[$WorkEmail]                 = getPostValue($WorkEmail, '');
-$fieldsValue[$StartDate]                 = getPostValue($StartDate, '');
+//$fieldsValue[$StartDate]                 = getPostValue($StartDate, '');
 $fieldsValue[$validated]				 = getPostValue($validated,'NO');
 $fieldsValue[$StartDate]                 = getPostValue($StartDate,date("m/d/Y"));
 
@@ -842,7 +842,7 @@ function check_select($i,$m,$e=true) {
 echo $_SERVER['REQUEST_URI'];
 ?>" id="Form1">
 <?php
-$fieldsValue[$StartDate] = date("m/d/Y");
+//$fieldsValue[$StartDate] = date("m/d/Y");
 ?>
 		<!-- <span id="Generalstatus" STYLE="background-color: #ffffcc;color: red; font-size: 16pt"><?php
 echo $Generalstatus;
